@@ -7,18 +7,7 @@ uuid: cf0633ff-beee-424a-a2f7-3dce4093e139
 
 patterns:
 
-  - name: comment.line.double-slash.bsl
-    match: (//.*$)
-
-  - name: string.quoted.double.bsl
-    begin: \"
-    end: \"(?![\"])
-    patterns:
-    - include: '#query'
-    - name: constant.character.escape.bsl
-      match: \"\"
-    - name: comment.line.double-slash.bsl
-      match: (^\s*//.*$)
+  - include: '#basic'
 
   - comment: "Proc and function defenition"
     begin: '(?i:(?<=[^\wа-яё\.]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-яё0-9_]+)\s*\()'
@@ -29,7 +18,9 @@ patterns:
     endCaptures:
       '1': {name: storage.modifier.bsl}
     patterns:
-    - include: $self
+    - include: '#basic'
+    - name: keyword.operator.assignment.bsl
+      match: (=)
     - name: storage.modifier.bsl
       match: (?i:(?<=[^\wа-яё\.]|^)(Знач|Val)(?=[^\wа-яё\.]|$))
     - name: invalid.illegal.bsl
@@ -48,14 +39,15 @@ patterns:
     endCaptures:
       '1': {name: storage.modifier.bsl}
 
-  - name: constant.language.bsl
-    match: (?i:(?<=[^\wа-яё\.]|^)(Неопределено|Undefined|Истина|True|Ложь|False|NULL)(?=[^\wа-яё\.]|$))
-
-  - name: constant.numeric.bsl
-    match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
-
-  - name: constant.other.date.bsl
-    match: \'((\d{4}[^\d\']*\d{2}[^\d\']*\d{2})([^\d\']*\d{2}[^\d\']*\d{2}([^\d\']*\d{2})?)?)\'
+  - comment: "Variable assignment"
+    name: meta.var-single-variable.bsl 
+    begin: (?i:(?<=;|^)\s*([\wа-яё]+))\s*(=)
+    beginCaptures:
+     '1': {name: variable.assignment.bsl}
+     '2': {name: keyword.operator.assignment.bsl}
+    end: (?=;)
+    patterns:
+     - include: $self
 
   - name: storage.type.bsl
     match: (?i:(?<=[^\wа-яё\.]|^)(КонецПроцедуры|EndProcedure|КонецФункции|EndFunction)(?=[^\wа-яё\.]|$))
@@ -80,15 +72,6 @@ patterns:
 
   - name: keyword.operator.comparison.bsl
     match: <=|>=|=|<|>
-
-  - name: keyword.operator.assignment.bsl
-    match: (=)
-
-  - name: keyword.operator.arithmetic.bsl
-    match: (\+|-|\*|/|%)
-
-  - name: keyword.operator.bsl
-    match: (,|;|\?)
 
   - name: support.function.bsl
     comment: "Functions w/o brackets"
@@ -233,3 +216,27 @@ repository:
     - name: string.quoted.double.sdbl
       match: \"\"[^"]*\"\"
     - include: source.sdbl
+
+  basic:
+    patterns:
+    - name: comment.line.double-slash.bsl
+      match: (//.*$)
+    - name: string.quoted.double.bsl
+      begin: \"
+      end: \"(?![\"])
+      patterns:
+      - include: '#query'
+      - name: constant.character.escape.bsl
+        match: \"\"
+      - name: comment.line.double-slash.bsl
+        match: (^\s*//.*$)
+    - name: constant.language.bsl
+      match: (?i:(?<=[^\wа-яё\.]|^)(Неопределено|Undefined|Истина|True|Ложь|False|NULL)(?=[^\wа-яё\.]|$))
+    - name: constant.numeric.bsl
+      match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
+    - name: constant.other.date.bsl
+      match: \'((\d{4}[^\d\']*\d{2}[^\d\']*\d{2})([^\d\']*\d{2}[^\d\']*\d{2}([^\d\']*\d{2})?)?)\'
+    - name: keyword.operator.arithmetic.bsl
+      match: (\+|-|\*|/|%)
+    - name: keyword.operator.bsl
+      match: (,|;|\?)
