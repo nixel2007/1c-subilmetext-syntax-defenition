@@ -73,6 +73,12 @@ patterns:
   - name: keyword.operator.comparison.bsl
     match: <=|>=|=|<|>
 
+  - name: keyword.operator.arithmetic.bsl
+    match: (\+|-|\*|/|%)
+
+  - name: keyword.operator.bsl
+    match: (;|\?)
+
   - name: support.function.bsl
     comment: "Functions w/o brackets"
     match: (?i:(?<=[^\wа-яё\.]|^)(Новый|New)(?=[^\wа-яё\.]|$))
@@ -236,7 +242,9 @@ repository:
       match: \b((\h{8}-(\h{4}-){3}\h{12})|\d+\.?\d*)\b
     - name: constant.other.date.bsl
       match: \'((\d{4}[^\d\']*\d{2}[^\d\']*\d{2})([^\d\']*\d{2}[^\d\']*\d{2}([^\d\']*\d{2})?)?)\'
-    - name: keyword.operator.arithmetic.bsl
-      match: (\+|-|\*|/|%)
+    - include: '#comma'
+
+  comma:
+    patterns:
     - name: keyword.operator.bsl
-      match: (,|;|\?)
+      match: (,)  
