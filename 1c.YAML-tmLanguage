@@ -9,7 +9,7 @@ patterns:
 
   - include: '#basic'
 
-  - comment: "Proc and function defenition"
+  - comment: "Proc and function definition"
     begin: '(?i:(?<=[^\wа-яё\.]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-яё0-9_]+)\s*\()'
     beginCaptures:
       '1': {name: storage.type.bsl}
