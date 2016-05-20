@@ -174,14 +174,12 @@ npm install -g vsce
 
 Скопировать нужные пункты Changelog.md в каждый из редакторов и сделать коммит
 
-[sublime-language-1c-bsl] git push
 [sublime-language-1c-bsl] git tag "v<version>"
-[sublime-language-1c-bsl] git push origin "v<version>"
+[sublime-language-1c-bsl] git push --tags
 
 [vsc-language-1c-bsl] `bump version in package.json && commit`
-[vsc-language-1c-bsl] git push
-[vsc-language-1c-bsl] git tag "v<version>"
-[vsc-language-1c-bsl] git push origin "v<version>"
+[sublime-language-1c-bsl] git tag "v<version>"
+[sublime-language-1c-bsl] git push --tags
 [vsc-language-1c-bsl] vsce publish
 
 [atom-language-1c-bsl] apm publish <version>
