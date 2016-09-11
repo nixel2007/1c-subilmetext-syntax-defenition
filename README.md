@@ -18,6 +18,19 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 
 Разработка описания грамматики языка на основе [формата TextMate](http://manual.macromates.com/en/language_grammars) ведется в специальном [YAML-файле](https://github.com/xDrivenDevelopment/1c-syntax/blob/master/1c.YAML-tmLanguage), описание которого и примеры использования вы можете найти [здесь](http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html).
 
+## Связи с другими проектами
+
+Проект 1c-syntax не органичивается репозиториями с описанием грамматики. В рамках наших активностей так же выполнялись/выполняются работы по направлениям:
+
+* Подсветка синтаксиса для Github: библиотека [linguist](https://github.com/github/linguist)
+* Подсветка синтаксиса GitLab: библиотека [rouge](https://github.com/jneen/rouge) и братский проект [1c-syntax-for-GitLab](https://github.com/karnilaev/1c-syntax-for-GitLab)
+* Подсветка синтаксиса в редакторе Ace: репозиторий [ace](https://github.com/ajaxorg/ace)
+* Запуск скриптов OneScript в редакторе Atom: пакеты [atom-script](https://github.com/rgbkrk/atom-script) и [atom-build](https://github.com/noseglid/atom-build)
+
+Планируются работы по направлениям:
+* Подсветка синтаксиса в редакторе CodeMirror - для поддержки подсветки в git-сервере BitBucket
+* Обновление подсветки в редакторе Highlight.js - для улучшенной поддержки подсветки в git-сервере Gogs и приведения идентификаторов языка к единому виду
+
 ## Дополнительные возможности
 
 Помимо, собственно, грамматики, мы пытаемся добавить в редакторы дополнительные
