@@ -60,9 +60,9 @@
 Если для релиза v1.1.0 запланировано, например, добавление команд по запуску
 скриптов `.os` в `onescript`, то данная функциональность должна появиться во
 всех редакторах одновременно (за исключением случаев, когда принято решение о
-невключении данного функциональности в пакет какого-либо редактора).
+невключении данной функциональности в пакет какого-либо редактора).
 
-По возможности разработку общего для всех редакторов функциональность следует вести
+По возможности разработку общей для всех редакторов функциональности следует вести
 в головном репозитории `1c-syntax` с последующим применением конвертеров и
 билд-скриптов.
 
@@ -133,6 +133,7 @@ Cоздайте символьную ссылку в каталог пакето
 #### VSC
 
 * Склонируйте репозитории `1c-syntax` и `vsc-language-1c-bsl` к себе на компьютер.
+* Выполните команду `npm install` для установки зависимостей пакета
 * Откройте папку репозитория в VSC.
 
 Подробную информацию об отладке и возможных проблемах можно найти
@@ -173,14 +174,12 @@ npm install -g vsce
 
 Скопировать нужные пункты Changelog.md в каждый из редакторов и сделать коммит
 
-[sublime-language-1c-bsl] git push
 [sublime-language-1c-bsl] git tag "v<version>"
-[sublime-language-1c-bsl] git push origin "v<version>"
+[sublime-language-1c-bsl] git push --tags
 
 [vsc-language-1c-bsl] `bump version in package.json && commit`
-[vsc-language-1c-bsl] git push
-[vsc-language-1c-bsl] git tag "v<version>"
-[vsc-language-1c-bsl] git push origin "v<version>"
+[sublime-language-1c-bsl] git tag "v<version>"
+[sublime-language-1c-bsl] git push --tags
 [vsc-language-1c-bsl] vsce publish
 
 [atom-language-1c-bsl] apm publish <version>
