@@ -194,6 +194,13 @@ patterns:
   - name: keyword.other.directive.bsl
     match: (?i:&(НаКлиенте((НаСервере(БезКонтекста)?)?)|AtClient((AtServer(NoContext)?)?)|НаСервере(БезКонтекста)?|AtServer(NoContext)?))
 
+  - comment: "Annotations"
+    begin: (?i)(&(Перед|Before|После|After|Вместо|Around))\s*\((.*)\)
+    beginCaptures:
+      '1': {name: keyword.other.annotation}
+      '3': {name: string.quoted.double.bsl}
+    end: $
+
   - name: keyword.other.preprocessor.bsl
     match: (?i:#(Если|If|ИначеЕсли|ElsIf|Иначе|Else|КонецЕсли|EndIf).*(Тогда|Then)?)
 
