@@ -25,6 +25,7 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 * Подсветка синтаксиса для Github: библиотека [linguist](https://github.com/github/linguist)
 * Подсветка синтаксиса GitLab: библиотека [rouge](https://github.com/jneen/rouge) и братский проект [1c-syntax-for-GitLab](https://github.com/karnilaev/1c-syntax-for-GitLab)
 * Подсветка синтаксиса в редакторе Ace: репозиторий [ace](https://github.com/ajaxorg/ace)
+* Подсветка синтаксиса в редакторе Vim: репозиторий [vim-language-1c-bsl](https://github.com/andreevlex/vim-language-1c-bsl) за авторством [@andreevlex](https://github.com/andreevlex)
 * Запуск скриптов OneScript в редакторе Atom: пакеты [atom-script](https://github.com/rgbkrk/atom-script) и [atom-build](https://github.com/noseglid/atom-build)
 
 Планируются работы по направлениям:
