@@ -10,13 +10,15 @@ patterns:
   - include: '#basic'
 
   - comment: "Proc and function definition"
-    begin: '(?i:(?<=[^\wа-яё\.]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-яё0-9_]+)\s*\()'
+    begin: '(?i:(?<=[^\wа-яё\.]|^)(Процедура|Procedure|Функция|Function)\s+([a-zа-яё0-9_]+)\s*(\())'
     beginCaptures:
       '1': {name: storage.type.bsl}
       '2': {name: entity.name.function.bsl}
-    end: '(?i:\)\s*((Экспорт|Export)(?=[^\wа-яё\.]|$))?)'
+      '3': {name: punctuation.bracket.begin.bsl}
+    end: '(?i:(\))\s*((Экспорт|Export)(?=[^\wа-яё\.]|$))?)'
     endCaptures:
-      '1': {name: storage.modifier.bsl}
+      '1': {name: punctuation.bracket.end.bsl}
+      '2': {name: storage.modifier.bsl}
     patterns:
     - include: '#basic'
     - name: keyword.operator.assignment.bsl
@@ -40,7 +42,7 @@ patterns:
       '1': {name: storage.modifier.bsl}
 
   - comment: "Variable assignment"
-    name: meta.var-single-variable.bsl 
+    name: meta.var-single-variable.bsl
     begin: (?i:(?<=;|^)\s*([\wа-яё]+))\s*(=)
     beginCaptures:
      '1': {name: variable.assignment.bsl}
@@ -253,3 +255,7 @@ repository:
       match: \'((\d{4}[^\d\']*\d{2}[^\d\']*\d{2})([^\d\']*\d{2}[^\d\']*\d{2}([^\d\']*\d{2})?)?)\'
     - name: keyword.operator.bsl
       match: (,)
+    - name: punctuation.bracket.begin.bsl
+      match: (\()
+    - name: punctuation.bracket.end.bsl
+      match: (\))
