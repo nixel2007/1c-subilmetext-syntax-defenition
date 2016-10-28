@@ -2,7 +2,7 @@
 ---
 name: 1C (Query)
 scopeName: source.sdbl
-firstLineMatch: (?i)Выбрать|Select(\s+Разрешенные|Allowed)?(\s+Различные|Distinct)?(\s+Первые|Top)?.*
+firstLineMatch: (?i)Выбрать|Select(\s+Разрешенные|\s+Allowed)?(\s+Различные|\s+Distinct)?(\s+Первые|\s+Top)?.*
 uuid: d94265d3-2270-4ff2-ba36-649fbb4160df
 
 patterns:
