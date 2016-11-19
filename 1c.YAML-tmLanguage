@@ -221,7 +221,7 @@ patterns:
   - comment: "Глобальный контекст - функции форматирования"
     name: support.function.bsl
     match: |-
-      (?i:(?<=[^\wа-яё\.]|^)(
+      (?x)(?i:(?<=[^\wа-яё\.]|^)(
        Формат|Format|
        ЧислоПрописью|NumberInWords|
        НСтр|NStr|
@@ -232,7 +232,7 @@ patterns:
   - comment: "Глобальный контекст - функции обращения к конфигурации"
     name: support.function.bsl
     match: |-
-      (?i:(?<=[^\wа-яё\.]|^)(
+      (?x)(?i:(?<=[^\wа-яё\.]|^)(
        ПолучитьОбщийМакет|GetCommonTemplate|
        ПолучитьОбщуюФорму|GetCommonForm|
        ПредопределенноеЗначение|PredefinedValue|
