@@ -620,8 +620,8 @@ patterns:
        СредстваОтображенияРекламы|AdvertisingPresentationTools|
        СредстваПочты|MailTools|
        СредстваТелефонии|TelephonyTools|
-       ФабрикаXDTO|ФайловыеПотоки|
-       FileStreams|XDTOFactory|
+       ФабрикаXDTO|XDTOFactory|
+       ФайловыеПотоки|FileStreams|
        ФоновыеЗадания|BackgroundJobs|
        ХранилищаНастроек|SettingsStorages|
        ВстроенныеПокупки|InAppPurchases|
