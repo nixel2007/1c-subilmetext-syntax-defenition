@@ -5,7 +5,7 @@ describe "language-1c-bsl", ->
 
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage('language-1c-bsl')
+      atom.packages.activatePackage('1c-syntax')
 
   grammarTest path.join(__dirname, 'fixtures/grammar/syntax_test_bsl.bsl')
   grammarTest path.join(__dirname, 'fixtures/grammar/syntax_test_bsl.os')
