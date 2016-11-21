@@ -1,0 +1,45 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+install:
+  - npm install
+
+script:
+  - 'mkdir grammars' 
+  - 'node node_modules/.bin/yaml2json --pretty 1c.YAML-tmLanguage > 1c.json' 
+  - 'node node_modules/.bin/yaml2json --pretty 1c-query.YAML-tmLanguage > 1c-query.json' 
+  - 'node node_modules/.bin/json2cson 1c.json > grammars/1c.cson --2spaces'
+  - 'node node_modules/.bin/json2cson 1c-query.json > grammars/1c-query.cson --2spaces'
+  - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+
+git:
+  depth: 10
+
+sudo: false
+
+os:
+  - linux
+  - osx
+
+env:
+  global:
+    - APM_TEST_PACKAGES=""
+
+  matrix:
+    - ATOM_CHANNEL=stable
+    - ATOM_CHANNEL=beta
+
+addons:
+  apt:
+    packages:
+    - build-essential
+    - git
+    - libgnome-keyring-dev
+    - fakeroot
+
+branches:
+  only:
+    - master
+    - develop
