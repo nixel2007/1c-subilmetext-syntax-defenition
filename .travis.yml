@@ -8,8 +8,8 @@ install:
 
 script:
   - 'node node_modules/.bin/yaml2json --pretty 1c.YAML-tmLanguage > 1c.json' 
-  - 'node node_modules/.bin/json2cson 1c.json > 1c.cson --2spaces'
-  - 'mv 1c.cson grammars/1c.cson'
+  -' mkdir grammars' 
+  - 'node node_modules/.bin/json2cson 1c.json > grammars/1c.cson --2spaces'
   - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
 git:
