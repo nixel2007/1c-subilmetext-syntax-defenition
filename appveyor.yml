@@ -9,7 +9,7 @@ branches:
 
 skip_tags: true
 
-  matrix:
+matrix:
   - ATOM_CHANNEL: stable
   - ATOM_CHANNEL: beta
 
