@@ -120,17 +120,17 @@ patterns:
       (?x)(?i:(?<=[^\wа-яё\.]|^)(
        Цел|Int|
        Окр|Round|
-       ACos|ACos|
-       ASin|ASin|
-       ATan|ATan|
-       Cos|Cos|
-       Exp|Exp|
-       Log|Log|
-       Log10|Log10|
-       Pow|Pow|
-       Sin|Sin|
-       Sqrt|Sqrt|
-       Tan|Tan
+       ACos|
+       ASin|
+       ATan|
+       Cos|
+       Exp|
+       Log|
+       Log10|
+       Pow|
+       Sin|
+       Sqrt|
+       Tan
       )\s*(?=\())
 
   - comment: "Глобальный контекст - функции работы со значениями типа Дата"
