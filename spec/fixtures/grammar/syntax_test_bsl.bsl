@@ -9,6 +9,29 @@
 //    ^ variable.bsl
 //      ^ storage.modifier.bsl
 
+Перем А, Б;
+//     ^ keyword.operator.bsl
+//       ^ variable.bsl
+
+Перем А Экспорт, Б;
+//    ^ variable.bsl
+//       ^ storage.modifier.bsl
+//             ^ keyword.operator.bsl
+//               ^ variable.bsl
+
+Перем А, Б Экспорт;
+//    ^ variable.bsl
+//     ^ keyword.operator.bsl
+//       ^ variable.bsl
+//         ^ storage.modifier.bsl
+
+Перем А Экспорт, Б Экспорт;
+//    ^ variable.bsl
+//       ^ storage.modifier.bsl
+//             ^ keyword.operator.bsl
+//               ^ variable.bsl
+//                 ^ storage.modifier.bsl
+
 #Если Сервер Тогда
 // <- keyword.other.preprocessor.bsl
 //    ^^^^^^ keyword.other.preprocessor.bsl

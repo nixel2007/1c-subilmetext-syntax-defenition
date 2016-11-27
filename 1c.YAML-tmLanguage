@@ -37,9 +37,16 @@ patterns:
     beginCaptures:
       '1': {name: storage.type.var.bsl}
       '2': {name: variable.bsl}
-    end: (?i:(Экспорт|Export)?)
+    end: (;)
     endCaptures:
-      '1': {name: storage.modifier.bsl}
+      '1': {name: keyword.operator.bsl}
+    patterns:
+    - name: keyword.operator.bsl
+      match: (,)
+    - name: storage.modifier.bsl
+      match: (?i:(?<=[^\wа-яё\.]|^)(Экспорт|Export)(?=[^\wа-яё\.]|$))
+    - name: variable.bsl
+      match: (?i:[a-zа-яё0-9_]+)
 
   - comment: "Variable assignment"
     name: meta.var-single-variable.bsl
