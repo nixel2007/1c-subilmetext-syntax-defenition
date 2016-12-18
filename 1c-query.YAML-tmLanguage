@@ -34,7 +34,7 @@ patterns:
     match: (?i)(?<=[^\wа-яё\.]|^)(Выбор|Case|Когда|When|Тогда|Then|Иначе|Else|Конец|End)(?=[^\wа-яё\.]|$)
 
   - name: keyword.operator.logical.sdbl
-    match: (?i)(?<!КАК\s|AS\s)(?<=[^\wа-яё\.]|^)(НЕ|NOT|И|AND|ИЛИ|OR|В\s+ИЕРАРХИИ|IN\s+HIERARCHY|В|In|Между|Between|Есть\sNULL|Is\s+NULL|Ссылка|Refs|Подобно|Like)(?=[^\wа-яё\.]|$)
+    match: (?i)(?<!КАК\s|AS\s)(?<=[^\wа-яё\.]|^)(НЕ|NOT|И|AND|ИЛИ|OR|В\s+ИЕРАРХИИ|IN\s+HIERARCHY|В|In|Между|Between|Есть(\s+НЕ)?\s+NULL|Is(\s+NOT)?\s+NULL|Ссылка|Refs|Подобно|Like)(?=[^\wа-яё\.]|$)
 
   - name: keyword.operator.comparison.sdbl
     match: <=|>=|=|<|>
