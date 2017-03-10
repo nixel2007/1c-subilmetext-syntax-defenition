@@ -1,5 +1,7 @@
 # 1c-syntax
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xDrivenDevelopment/1c-syntax.svg)](https://greenkeeper.io/)
+
 [![Join the chat at https://gitter.im/xDrivenDevelopment/1c-syntax](https://badges.gitter.im/xDrivenDevelopment/1c-syntax.svg)](https://gitter.im/xDrivenDevelopment/1c-syntax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/xDrivenDevelopment/1c-syntax.svg?branch=master)](https://travis-ci.org/xDrivenDevelopment/1c-syntax)
 
