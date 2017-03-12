@@ -2,3 +2,9 @@ node_modules
 build
 1c.tmLanguage
 1c-query.tmLanguage
+
+1c-query\.json
+
+1c\.json
+
+grammars/

@@ -210,6 +210,14 @@
     // TODO:
 //     ^^^^	storage.type.class.todo
 
+    Если А И
+//       ^ not:variable.assignment.bsl
+        Б = В Тогда
+//      ^ not:variable.assignment.bsl       
+        Б = 0;
+//      ^ variable.assignment.bsl
+    КонецЕсли;
+
 КонецПроцедуры
 // <- storage.type.bsl
 
