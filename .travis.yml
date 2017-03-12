@@ -10,10 +10,10 @@ install:
 
 script:
   - 'mkdir grammars' 
-  - 'node node_modules/.bin/yaml2json --pretty 1c.YAML-tmLanguage > 1c.json' 
-  - 'node node_modules/.bin/yaml2json --pretty 1c-query.YAML-tmLanguage > 1c-query.json' 
-  - 'node node_modules/.bin/json2cson 1c.json > grammars/1c.cson --2spaces'
-  - 'node node_modules/.bin/json2cson 1c-query.json > grammars/1c-query.cson --2spaces'
+  - 'node_modules/.bin/yaml2json --pretty 1c.YAML-tmLanguage > 1c.json' 
+  - 'node_modules/.bin/yaml2json --pretty 1c-query.YAML-tmLanguage > 1c-query.json' 
+  - 'node_modules/.bin/json2cson 1c.json > grammars/1c.cson --2spaces'
+  - 'node_modules/.bin/json2cson 1c-query.json > grammars/1c-query.cson --2spaces'
   - 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
 
 git:
