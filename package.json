@@ -6,7 +6,7 @@
    "atom-grammar-test": "^0.6.3",
     "cson": "^4.0.0",
     "plist": "^2.0.1",
-    "yamljs": "^0.2.8"
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {},
   "repository": {
