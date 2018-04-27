@@ -28,8 +28,9 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 * Подсветка синтаксиса в редакторе Vim: репозиторий [vim-language-1c-bsl](https://github.com/andreevlex/vim-language-1c-bsl) за авторством [@andreevlex](https://github.com/andreevlex)
 * Подсветка синтаксиса в редакторах с поддержкой GtkSourceView: библиотека [GtkSourceView](https://wiki.gnome.org/Projects/GtkSourceView), репозиторий [gtksourceview-1c-bsl](https://github.com/andreevlex/gtksourceview-1c-bsl)
 * Запуск скриптов OneScript в редакторе Atom: пакеты [atom-script](https://github.com/rgbkrk/atom-script) и [atom-build](https://github.com/noseglid/atom-build)
-* Модуль подсветки [brush-bsl](https://github.com/leoniv/brush-bsl) для js библиотеки [syntaxhighlighter
-](https://github.com/syntaxhighlighter/syntaxhighlighter) 
+* Модули подсветки [brush-bsl](https://github.com/leoniv/brush-bsl)
+и [brush-sdbl](https://github.com/leoniv/brush-sdbl) для js библиотеки
+[syntaxhighlighter](https://github.com/syntaxhighlighter/syntaxhighlighter). Эти модули должны работать в JIRA. 
 
 Планируются работы по направлениям:
 * Подсветка синтаксиса в редакторе CodeMirror - для поддержки подсветки в git-сервере BitBucket
