@@ -1,8 +1,8 @@
 # 1c-syntax
 
 [![Join the chat at https://gitter.im/xDrivenDevelopment/1c-syntax](https://badges.gitter.im/xDrivenDevelopment/1c-syntax.svg)](https://gitter.im/xDrivenDevelopment/1c-syntax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/xDrivenDevelopment/1c-syntax.svg?branch=master)](https://travis-ci.org/xDrivenDevelopment/1c-syntax)
-[![Greenkeeper badge](https://badges.greenkeeper.io/xDrivenDevelopment/1c-syntax.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/1c-syntax/1c-syntax.svg?branch=master)](https://travis-ci.org/1c-syntax/1c-syntax)
+[![Greenkeeper badge](https://badges.greenkeeper.io/1c-syntax/1c-syntax.svg)](https://greenkeeper.io/)
 
 Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (Sublime Text, Atom and VS Code).
 
@@ -12,11 +12,11 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 
 | Репозиторий | Пакет |
 |:---:|:---:|
-| [Sublime Text](https://github.com/xDrivenDevelopment/sublime-language-1c-bsl) | [Package control](https://packagecontrol.io/packages/Language%201C%20(BSL)) |
-| [Atom](https://github.com/xDrivenDevelopment/atom-language-1c-bsl) | [Atom.io/packages](https://atom.io/packages/language-1c-bsl) |
-| [VS Code](https://github.com/xDrivenDevelopment/vsc-language-1c-bsl) | [Marketplace](https://marketplace.visualstudio.com/items/xDrivenDevelopment.language-1c-bsl) |
+| [Sublime Text](https://github.com/1c-syntax/sublime-language-1c-bsl) | [Package control](https://packagecontrol.io/packages/Language%201C%20(BSL)) |
+| [Atom](https://github.com/1c-syntax/atom-language-1c-bsl) | [Atom.io/packages](https://atom.io/packages/language-1c-bsl) |
+| [VS Code](https://github.com/1c-syntax/vsc-language-1c-bsl) | [Marketplace](https://marketplace.visualstudio.com/items/xDrivenDevelopment.language-1c-bsl) |
 
-Разработка описания грамматики языка на основе [формата TextMate](http://manual.macromates.com/en/language_grammars) ведется в специальном [YAML-файле](https://github.com/xDrivenDevelopment/1c-syntax/blob/master/1c.YAML-tmLanguage), описание которого и примеры использования вы можете найти [здесь](http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html).
+Разработка описания грамматики языка на основе [формата TextMate](http://manual.macromates.com/en/language_grammars) ведется в специальном [YAML-файле](https://github.com/1c-syntax/1c-syntax/blob/master/1c.YAML-tmLanguage), описание которого и примеры использования вы можете найти [здесь](http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html).
 
 ## Связи с другими проектами
 
@@ -42,7 +42,7 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 возможности, которые могут упростить работу с 1С.  
 На данный момент список таких фич выглядит вот так:
 
-| Функциональность \ Поддержка в редакторах | [Atom](https://github.com/xDrivenDevelopment/atom-language-1c-bsl) | [Sublime Text](https://github.com/xDrivenDevelopment/sublime-language-1c-bsl) | [VS Code](https://github.com/xDrivenDevelopment/vsc-language-1c-bsl) |
+| Функциональность \ Поддержка в редакторах | [Atom](https://github.com/1c-syntax/atom-language-1c-bsl) | [Sublime Text](https://github.com/1c-syntax/sublime-language-1c-bsl) | [VS Code](https://github.com/1c-syntax/vsc-language-1c-bsl) |
 |---|:---:|:---:|:---:|
 | Подсветка текста запроса внутри модуля и отдельно | Есть | Есть | Есть |
 | Блочное комментирование через `//` | Есть | Есть | Есть |
@@ -51,7 +51,7 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 | Переход к определению процедур и функций | Есть | Есть | Есть |
 | Автодополнение процедур и функций глобального контекста | Есть | Есть | Есть |
 | Автодополнение процедур и функций, уникальных для OneScript | Нет | Нет | Есть |
-| Сниппеты (шаблоны текста) | [Есть](https://github.com/xDrivenDevelopment/1c-syntax/issues/110) | Есть | Есть |
+| Сниппеты (шаблоны текста) | [Есть](https://github.com/1c-syntax/1c-syntax/issues/110) | Есть | Есть |
 | Использование автоматических отступов по ключевым словам | Есть | Есть | Есть |
 | Автоматическое выравнивание блока кода или файла целиком | Есть | Есть | Есть |
 | Разворачивание конструкций вида `++`/`+=` и подобных по нажатию `Tab` | Есть | Есть | Есть |
@@ -78,5 +78,5 @@ Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (S
 
 ## Сотрудничество
 
-Если вы разработчик и хотите помочь с разработкой пакетов и/или грамматикой, пожалуйста, ознакомьтесь с [гайдом для разработчиков](https://github.com/xDrivenDevelopment/1c-syntax/blob/master/CONTRIBUTING.md).  
-Уже поставленные задачи по разработке можно найти на странице [Issues](https://github.com/xDrivenDevelopment/1c-syntax/issues) данного репозитория.
+Если вы разработчик и хотите помочь с разработкой пакетов и/или грамматикой, пожалуйста, ознакомьтесь с [гайдом для разработчиков](https://github.com/1c-syntax/1c-syntax/blob/master/CONTRIBUTING.md).  
+Уже поставленные задачи по разработке можно найти на странице [Issues](https://github.com/1c-syntax/1c-syntax/issues) данного репозитория.
