@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/xDrivenDevelopment/1c-syntax.git"
   },
+  "scripts": {
+    "build-grammars": "yaml2json --pretty 1c.YAML-tmLanguage > 1c.json && yaml2json --pretty 1c-query.YAML-tmLanguage > 1c-query.json && json2cson 1c.json > grammars/1c.cson --2spaces && json2cson 1c-query.json > grammars/1c-query.cson --2spaces"
+  },
   "author": "xDrivenDevelopment",
   "license": "MIT",
   "bugs": {
