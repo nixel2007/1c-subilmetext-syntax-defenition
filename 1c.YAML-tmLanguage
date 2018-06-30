@@ -21,6 +21,7 @@ patterns:
       '1': {name: punctuation.bracket.end.bsl}
       '2': {name: storage.modifier.bsl}
     patterns:
+    - include: '#annotations'
     - include: '#basic'
     - name: keyword.operator.assignment.bsl
       match: (=)
@@ -94,12 +95,7 @@ patterns:
   - name: storage.modifier.directive.bsl
     match: (?i:&(НаКлиенте((НаСервере(БезКонтекста)?)?)|AtClient((AtServer(NoContext)?)?)|НаСервере(БезКонтекста)?|AtServer(NoContext)?))
 
-  - comment: "Annotations"
-    begin: (?i)(&(Перед|Before|После|After|Вместо|Around))\s*\((.*)\)
-    beginCaptures:
-      '1': {name: storage.type.annotation.bsl}
-      '3': {name: string.quoted.double.bsl}
-    end: $
+  - include: '#annotations'
 
   - name: keyword.other.preprocessor.bsl
     match: (?i:#(Если|If|ИначеЕсли|ElsIf|Иначе|Else|КонецЕсли|EndIf).*(Тогда|Then)?)
@@ -704,3 +700,29 @@ repository:
       match: (\()
     - name: punctuation.bracket.end.bsl
       match: (\))
+      
+  annotations:
+    patterns:
+            
+      - comment: "Annotations with parameters"
+        begin: '(?i)(&([a-zа-яё0-9_]+))\s*(\()'
+        beginCaptures:
+          '1': {name: storage.type.annotation.bsl}
+          '3': {name: punctuation.bracket.begin.bsl}
+        end: '(\))'
+        endCaptures:
+          '1': {name: punctuation.bracket.end.bsl}
+        patterns:
+        - include: '#basic'
+        - name: keyword.operator.assignment.bsl
+          match: (=)
+        - name: invalid.illegal.bsl
+          match: (?<=[^\wа-яё\.]|^)((?<==)(?i)[a-zа-яё0-9_]+)(?=[^\wа-яё\.]|$)
+        - name: invalid.illegal.bsl
+          match: (?<=[^\wа-яё\.]|^)((?<==\s)\s*(?i)[a-zа-яё0-9_]+)(?=[^\wа-яё\.]|$)
+        - name: variable.annotation.bsl
+          match: (?i)[a-zа-яё0-9_]+
+          
+      - comment: "Annotations without parameters"
+        name: storage.type.annotation.bsl
+        match: (?i)(&([a-zа-яё0-9_]+))

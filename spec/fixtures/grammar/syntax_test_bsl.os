@@ -20,7 +20,7 @@
 //                                       ^ keyword.operator.assignment.bsl
 //                                         ^ constant.numeric.bsl
 //                                          ^ keyword.operator.bsl
-//                                           ^ constant.numeric.bsl
+//                                            ^ constant.numeric.bsl
 //                                                ^ punctuation.bracket.end.bsl
     Знач Парам2,
 //  ^ storage.modifier.bsl
@@ -58,7 +58,7 @@
 //          ^ punctuation.bracket.begin.bsl
 //           ^^^ variable.annotation.bsl
 //                      ^ keyword.operator.assignment.bsl
-//                        ^ constant.language.bs
+//                        ^ constant.language.bsl
 Процедура ТестДолжен_ПроверитьПолучениеАннотацийМетода() Экспорт
 
 КонецПроцедуры
