@@ -150,7 +150,7 @@
 //                        ^ constant.language.bsl
     Иначе
 //  ^ keyword.control.conditional.bsl
-        ОбычныйПараметр = Ложь;
+        ОбычныйПараметр = Ложь
     КонецЕсли;
 //  ^ keyword.control.conditional.bsl
 
