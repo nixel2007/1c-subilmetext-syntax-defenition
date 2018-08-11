@@ -69,7 +69,7 @@ patterns:
     beginCaptures:
      '1': {name: variable.assignment.bsl}
      '2': {name: keyword.operator.assignment.bsl}
-    end: (?=;)
+    end: (?i:(?=(;|Иначе|Конец|Els|End)))
     patterns:
      - include: '#basic'
      - include: '#miscellaneous'
