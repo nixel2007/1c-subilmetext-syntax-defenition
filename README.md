@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/xDrivenDevelopment/1c-syntax](https://badges.gitter.im/xDrivenDevelopment/1c-syntax.svg)](https://gitter.im/xDrivenDevelopment/1c-syntax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/1c-syntax/1c-syntax.svg?branch=master)](https://travis-ci.org/1c-syntax/1c-syntax)
-[![Greenkeeper badge](https://badges.greenkeeper.io/1c-syntax/1c-syntax.svg)](https://greenkeeper.io/)
+
 
 Syntax definition rules for 1C:Enterprise 8 for tmLanguage-based text editors (Sublime Text, Atom and VS Code).
 
