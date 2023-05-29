@@ -1,4 +1,7 @@
 // SYNTAX TEST "source.bsl"
+#native
+// <- keyword.control.native.bsl
+
 #Использовать cmdline
 // <- keyword.control.import.bsl
 
